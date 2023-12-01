@@ -1,0 +1,25 @@
+
+body {
+  background-color:goldenrod !important;
+  font-family: monospace !important;
+  text-align: center;
+  height: 100% ;
+  overflow-wrap:break-word;
+  margin-top: 3rem !important;
+ 
+}
+
+.output{
+  overflow: auto;
+  height: 510px;
+}
+.exampleBtn{
+  margin-top: 1rem;
+  position: absolute;
+  right: 5%;
+  margin-bottom: 1rem;
+  width: 35px !important;
+}
+.exampleTex{
+  white-space: pre !important;
+}
