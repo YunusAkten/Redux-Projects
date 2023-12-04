@@ -13,7 +13,7 @@ function WeatherCard({ day, index }) {
   return (
     <div className="rounded col-12 justify  col-sm-6   row col-md-3  mx-1 weatherCard mt-2  bg-dark  ">
       <h3 className="col-12">
-        <strong>{Math.round(day.temp.day)}°</strong>/{" "}
+        <strong>{Math.round(day.temp.day)}°</strong>/
         {Math.round(day.temp.night)}°
       </h3>
       <div className="col-6">
