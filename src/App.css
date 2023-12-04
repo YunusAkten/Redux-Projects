@@ -1,0 +1,25 @@
+
+body{
+  background-color: #243763 !important;
+ 
+  
+}
+*{
+  color: #ffebbf !important;
+}
+.App{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  
+}
+
+.bolt-icon {
+  color: #ec6e4c !important;
+}
+
+.weatherCard{
+max-width: 150px !important;
+}
