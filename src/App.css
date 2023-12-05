@@ -1,0 +1,71 @@
+/* https://www.color-hex.com/color-palette/68805 */
+
+:root {
+    --background-color-light: #fefcfe;
+    --font-color-light: #2a3444;
+    --secondary-color:#fadb44;
+  
+    --background-color-dark: #2a3444;
+    --font-color-dark: #fefcfe;
+  }
+  
+  body {
+    background-color: var(--background-color-light)  !important;
+    color: var(--font-color-light) ;
+  }
+  
+  body.dark-mode {
+    background-color: var(--background-color-dark) !important;
+    color:var(--font-color-dark) ;
+  }
+  body.dark-mode a{
+    color:var(--font-color-dark) ;
+  }
+#root{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+}
+.words{
+    font-size: 1.5rem;
+    max-width: 100vw !important;
+    white-space: nowrap;
+    overflow: hidden;
+  
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+.current-word{
+    font-size: 2rem;
+    background-color: #ff7373; 
+    padding: 0.3rem;
+    margin-right: 0.5rem;
+}
+.true{
+    background-color: green;
+}
+.false{
+    background-color: red;
+}
+
+.rightWord{
+    color:green;
+}
+.wrongWord{
+    color:red;
+}
+#results{
+    background-color: black;
+    color: var(--font-color-dark);
+}
+
+.wpm{
+    color: var(--secondary-color)  ;
+}
