@@ -12,31 +12,33 @@ function Results() {
       {showResults && (
         <div
           id="results"
-          className=" fixed-top mt-3 mx-auto    col-6 col-md-3 p-4 rounded  "
+          className=" fixed-top mt-3 mx-auto  z-1  col-12 col-md-6 col-lg-4  p-4 rounded  "
         >
-          <h2>Results </h2>
+          <h3>Results </h3>
           <div className="text-center">
-            <h3>
+            <h4>
               <span className=" wpm">WPM: </span>
               {rightWords}
-            </h3>
+            </h4>
             <p>(Words per minute)</p>
           </div>
           <div className="row">
-            <h4 className="mt-2 d-inline col-8 result-heading ">Words: </h4>{" "}
-            <span className="text-success fs-3  col-1  inline">
+            <h5 className="mt-2 d-inline col-8 result-heading ">Words: </h5>{" "}
+            <span className="text-success mx-2 fs-4  col-1  inline">
               {rightWords}
             </span>
-            <span className="col-1 fs-4 ">|</span>
-            <span className="text-danger px-1 col-1 fs-3">{wrongWords}</span>
+            <span className="col-1 fs-5 ">|</span>
+            <span className="text-danger px-1 col-1 fs-4">{wrongWords}</span>
           </div>
           <div className="row  ">
-            <h4 className=" col-8  mt-2 result-heading d-inline">
+            <h5 className=" col-8  mt-2 result-heading d-inline">
               Keystrokes:{" "}
-            </h4>
-            <span className="col-1   fs-3 text-success">{rightKeyStrokes}</span>
-            <span className="col-1 fs-4">|</span>{" "}
-            <span className="fs-3 col-1 px-1 text-danger">
+            </h5>
+            <span className="col-1 mx-2  fs-4 text-success">
+              {rightKeyStrokes}
+            </span>
+            <span className="col-1 fs-5">|</span>{" "}
+            <span className="fs-4 col-1 px-1 text-danger">
               {wrongKeyStrokes}
             </span>
           </div>

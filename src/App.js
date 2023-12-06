@@ -29,13 +29,13 @@ function App() {
   return (
     <div className="App container mt-2   justify-content-center ">
       <NightMode> </NightMode>
-      <Results></Results>
+
       <main>
         <Words wordRef={wordRef}></Words>
         <TypingArea></TypingArea>
         <Timer></Timer>
       </main>
-
+      <Results></Results>
       <footer className="fixed-bottom text-center">
         <p className=" mt-5">
           Created by{" "}

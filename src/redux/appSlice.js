@@ -10,8 +10,10 @@ export const fetchWords = createAsyncThunk("words/fetchWords", async () => {
 export const appSlice = createSlice({
   name: "app",
   initialState: {
+    theme: "",
+    testStarted: false,
     showResults: false,
-    words: [],
+
     rightWordsArr: [],
     rightWords: 0,
     wrongWords: 0,
@@ -21,6 +23,7 @@ export const appSlice = createSlice({
     currentWordIndex: 0,
     input: "",
     inputTrue: null,
+    words: [],
   },
   reducers: {
     checkInput: (state, action) => {
@@ -47,31 +50,62 @@ export const appSlice = createSlice({
         }
         // check input
         else {
+          // if input is true
           if (
             action.payload === state.currentWord.slice(0, action.payload.length)
           ) {
             state.rightKeyStrokes += 1;
             state.inputTrue = true;
-          } else {
+          }
+          // if input is wrong
+          else {
             state.wrongKeyStrokes += 1;
             state.inputTrue = false;
           }
         }
-      } else {
+      }
+      // if input is empty
+      else {
         state.inputTrue = null;
       }
+      // set inputd
       state.input = action.payload;
     },
     setShowResults: (state, action) => {
       state.showResults = action.payload;
+      state.input = "";
+    },
+    setTheme: (state, action) => {
+      state.theme = action.payload;
+    },
+    resetAll: (state) => {
+      state.showResults = false;
+      state.rightWordsArr = [];
+      state.rightWords = 0;
+      state.wrongWords = 0;
+      state.rightKeyStrokes = 0;
+      state.wrongKeyStrokes = 0;
+      state.currentWord = state.words[0];
+      state.currentWordIndex = 0;
+      state.inputTrue = null;
+    },
+    setTestStarted: (state, action) => {
+      state.testStarted = action.payload;
     },
   },
   extraReducers: (builder) => {
     builder.addCase(fetchWords.fulfilled, (state, action) => {
       state.words = action.payload;
+
       state.currentWord = action.payload[0];
     });
   },
 });
-export const { checkInput, setShowResults } = appSlice.actions;
+export const {
+  checkInput,
+  setShowResults,
+  setTheme,
+  resetAll,
+  setTestStarted,
+} = appSlice.actions;
 export default appSlice.reducer;

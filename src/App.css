@@ -4,7 +4,6 @@
     --background-color-light: #fefcfe;
     --font-color-light: #2a3444;
     --secondary-color:#fadb44;
-  
     --background-color-dark: #2a3444;
     --font-color-dark: #fefcfe;
   }
@@ -18,9 +17,10 @@
     background-color: var(--background-color-dark) !important;
     color:var(--font-color-dark) ;
   }
-  body.dark-mode a{
-    color:var(--font-color-dark) ;
+  body.dark-mode  a{
+    color:var(--secondary-color) !important ;
   }
+ 
 #root{
     display: flex;
     flex-direction: column;
@@ -39,7 +39,6 @@ body{
     white-space: nowrap;
     overflow: hidden;
   
-    margin-top: 2rem;
     margin-bottom: 1rem;
 }
 .current-word{
@@ -64,6 +63,7 @@ body{
 #results{
     background-color: black;
     color: var(--font-color-dark);
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
 }
 
 .wpm{
